@@ -22,7 +22,8 @@ def recieve(client):
             index=clients.index(client)
             clients.remove(client)
             print(f'{nicknames[index]} is disconnected')
-            nicknames[index].remove()
+            nick=nicknames[index]
+            nicknames.remove(nick)
             client.close()
             break
 
